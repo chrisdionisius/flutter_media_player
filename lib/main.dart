@@ -89,6 +89,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(35, 31, 30, 1),
       appBar: AppBar(
         title: const Text('Upload Image'),
       ),
@@ -106,6 +107,7 @@ class _HomeState extends State<Home> {
               height: 10,
             ),
             Container(
+              margin: const EdgeInsets.only(bottom: 10),
               child: (image != null)
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -121,34 +123,34 @@ class _HomeState extends State<Home> {
                     )
                   : const Text(
                       "No Image",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
             ),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) => const VideoPlayerApp(),
-            //       ),
-            //     );
-            //   },
-            //   child: const Text('Video Player'),
-            // )
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VideoPlayerApp(),
+                  ),
+                );
+              },
+              child: const Text('Video Player'),
+            )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const VideoPlayerApp(),
-            ),
-          );
-        },
-        child: const Icon(Icons.play_arrow),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //         builder: (context) => const VideoPlayerApp(),
+      //       ),
+      //     );
+      //   },
+      //   child: const Icon(Icons.play_arrow),
+      // ),
     );
   }
 }

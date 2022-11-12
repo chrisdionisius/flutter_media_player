@@ -35,6 +35,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.5+3
   video_player: ^2.4.7
+  qr_code_scanner: ^1.0.1
+  path: ^1.8.1
 
 dev_dependencies:
   flutter_test:

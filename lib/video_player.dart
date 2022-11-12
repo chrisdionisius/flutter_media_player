@@ -54,6 +54,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(35, 31, 30, 1),
       appBar: AppBar(
         title: const Text('Butterfly Video'),
         // leading: IconButton(
